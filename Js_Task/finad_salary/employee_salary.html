@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee_Salary</title>
+</head>
+<body>
+    <h1 id="header">This Final Salary : </h1>
+    <script>
+        let basic_salary = prompt("Enter the Employee basic salary");
+        let allownces = prompt("Enter the Allownces");
+        didection = prompt("Enter the Didection");
+        total_salary = parseInt(basic_salary) + parseInt(allownces) - didection;
+        document.getElementById("header").innerHTML += total_salary;
+    </script>
+</body>
+</html>

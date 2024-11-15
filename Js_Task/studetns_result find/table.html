@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, td, th {  
+        border: 1px solid ;
+        }
+       table
+       {
+        border-collapse: collapse;
+        text-align:center;
+        width:40%;
+       }
+       th
+       {
+        line-height: 30px;
+        padding: 10px;
+       }    
+    </style>
+    <title>Table</title>
+</head>
+<body>
+    <div>
+        sub-1
+        <input type="text" placeholder="Enter the subject name" id="inp1">
+        <input type="text" placeholder="Enter the Marks" id="inp1-1">
+        <br><br>
+        sub-2
+        <input type="text" placeholder="Enter the subject name" id="inp2">
+        <input type="text" placeholder="Enter the Marks" id="inp2-1">
+        <br><br>
+        sub-3
+        <input type="text" placeholder="Enter the subject name" id="inp3">
+        <input type="text" placeholder="Enter the Marks" id="inp3-1">
+        <br><br>
+        sub-4
+        <input type="text" placeholder="Enter the subject name" id="inp4">
+        <input type="text" placeholder="Enter the Marks" id="inp4-1">
+        <br><br>
+        <button onkeyup="sub()">Submit</button>
+    </div>
+    <br><br><br>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Toatal</th>
+            <th onclick="per()" id="paa">Percentage</th>
+            <th onclick="grad()">Grade</th>
+        </tr>
+        <tr>
+            <td id="a1"></td>
+            <td id="a2"></td>
+        </tr>
+        <tr>
+            <td id="b1"></td>
+            <td id="b2"></td>
+            <td id="tot"></td>
+            <td id="Percentage"></td> 
+            <td id="Grade"></td>   
+        </tr>
+        <tr>
+            <td id="c1"></td>
+            <td id="c2"></td>
+        </tr>
+        <tr>
+            <td id="d1"></td>
+            <td id="d2"></td>
+        </tr>
+    </table>
+    <script>
+        function sub()
+        {
+            /* first subject*/
+            let s1 = document.getElementById('inp1');
+            let s1_1 = document.getElementById('a1').innerHTML=s1.value;
+            let s1_2 = document.getElementById('inp1-1');
+            let s1_3 = document.getElementById('a2').innerHTML=s1_2.value;
+            /* second subject*/
+            let s2 = document.getElementById('inp2');
+            let s2_1 = document.getElementById('b1').innerHTML=s2.value;
+            let s2_2 = document.getElementById('inp2-1');
+            let s2_3 = document.getElementById('b2').innerHTML=s2_2.value;
+            /*third subject*/
+            let s3 = document.getElementById('inp3');
+            let s3_1 = document.getElementById('c1').innerHTML=s3.value;
+            let s3_2 = document.getElementById('inp3-1');
+            let s3_3 = document.getElementById('c2').innerHTML=s3_2.value;
+            /* foure subject */
+            let s4 = document.getElementById('inp4');
+            let s4_1 = document.getElementById('d1').innerHTML=s4.value;
+            let s4_2 = document.getElementById('inp4-1');
+            let s4_3 = document.getElementById('d2').innerHTML=s4_2.value;
+            /*subjects total*/
+            let total = parseInt(s1_3) + parseInt(s2_3) + parseInt(s3_3) + parseInt(s4_3) 
+            let tol = document.getElementById('tot').innerHTML=total;        
+
+        }  
+        /*percentage count*/ 
+        function per()     
+        {
+            let s1 = document.getElementById('inp1');
+            let s1_1 = document.getElementById('a1').innerHTML=s1.value;
+            let s1_2 = document.getElementById('inp1-1');
+            let s1_3 = document.getElementById('a2').innerHTML=s1_2.value;
+            /* second subject*/
+            let s2 = document.getElementById('inp2');
+            let s2_1 = document.getElementById('b1').innerHTML=s2.value;
+            let s2_2 = document.getElementById('inp2-1');
+            let s2_3 = document.getElementById('b2').innerHTML=s2_2.value;
+            /*third subject*/
+            let s3 = document.getElementById('inp3');
+            let s3_1 = document.getElementById('c1').innerHTML=s3.value;
+            let s3_2 = document.getElementById('inp3-1');
+            let s3_3 = document.getElementById('c2').innerHTML=s3_2.value;
+            /* foure subject */
+            let s4 = document.getElementById('inp4');
+            let s4_1 = document.getElementById('d1').innerHTML=s4.value;
+            let s4_2 = document.getElementById('inp4-1');
+            let s4_3 = document.getElementById('d2').innerHTML=s4_2.value;
+            /*subjects total*/
+            let total = parseInt(s1_3) + parseInt(s2_3) + parseInt(s3_3) + parseInt(s4_3) 
+        
+            let per = (total/400)*100;
+            let ans = document.getElementById('Percentage').innerHTML=per;
+        }
+        /*grad count*/
+        function grad()
+        {
+            let s1 = document.getElementById('inp1');
+            let s1_1 = document.getElementById('a1').innerHTML=s1.value;
+            let s1_2 = document.getElementById('inp1-1');
+            let s1_3 = document.getElementById('a2').innerHTML=s1_2.value;
+            /* second subject*/
+            let s2 = document.getElementById('inp2');
+            let s2_1 = document.getElementById('b1').innerHTML=s2.value;
+            let s2_2 = document.getElementById('inp2-1');
+            let s2_3 = document.getElementById('b2').innerHTML=s2_2.value;
+            /*third subject*/
+            let s3 = document.getElementById('inp3');
+            let s3_1 = document.getElementById('c1').innerHTML=s3.value;
+            let s3_2 = document.getElementById('inp3-1');
+            let s3_3 = document.getElementById('c2').innerHTML=s3_2.value;
+            /* foure subject */
+            let s4 = document.getElementById('inp4');
+            let s4_1 = document.getElementById('d1').innerHTML=s4.value;
+            let s4_2 = document.getElementById('inp4-1');
+            let s4_3 = document.getElementById('d2').innerHTML=s4_2.value;
+            /*subjects total*/
+            let total = parseInt(s1_3) + parseInt(s2_3) + parseInt(s3_3) + parseInt(s4_3);
+
+            let per = (total/400)*100;
+            if(per >=90)
+            {
+                document.getElementById('Grade').innerHTML = "A";
+            }
+            else if(per >=80)
+            {
+                document.getElementById('Grade').innerHTML = "-A";
+            }
+            else if(per >=70)
+            {
+                document.getElementById('Grade').innerHTML = "B";
+            }
+            else if(per >=60)
+            {
+                document.getElementById('Grade').innerHTML = "-B";
+            }
+            else if(per >=50)
+            {
+                document.getElementById('Grade').innerHTML = "c";
+            }
+            else if(per >=40)
+            {
+                document.getElementById('Grade').innerHTML = "Fail";
+            }
+    
+        }
+
+      
+    </script>
+</body>
+</html>

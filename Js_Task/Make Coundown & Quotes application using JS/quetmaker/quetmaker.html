@@ -1,0 +1,89 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qoutemaker</title>
+    <style>
+       body
+        {
+            background-image: url("https://img.freepik.com/free-photo/magenta-concrete-textured-background-blank-space-with-vignette_53876-119885.jpg?t=st=1710067488~exp=1710071088~hmac=d798dc7f1e911de0a2dbd11ee87272a019ece7de95ed70dce9f57b1f59e71288&w=1380");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover ;
+            border: 2px solid pink;
+            border-radius: 20px;
+            width: 40%;
+            height: 425px;
+            margin: 240px auto;
+            color: aliceblue;
+            box-shadow: 2px 2px 20px 20px;
+        }
+        #main
+        {
+            border: 2px solid pink;
+            border-radius: 20px;
+            width: 80%;
+            height: 300px;
+            margin: 60px auto;
+            box-shadow: 3px 1px 20px 8px;
+        }
+        p
+        {
+            margin-left: 450px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="time" style="text-align: center; font-size: 35px; margin-top: 60px;"></h1>
+   
+    <div id="container" style="text-align: center; font-size: 22px; margin-top: 40px;">
+        <blockquote id="text"></blockquote>
+        <p><i>𝒸𝓇𝑒𝒶𝓉𝑒𝒹 𝒷𝓎 R@v!</i></p>
+    </div>
+</div>
+    <script>
+
+        let nextdate = new Date("2025-01-01 00:00").getTime();
+
+        let getTime = () =>
+        {
+            let now = new Date().getTime();
+
+            let lefTime = nextdate - now;
+
+            let days = Math.floor(lefTime/(1000*60*60*24));
+            let hrs = Math.floor(lefTime%(1000*60*60*24)/(1000*60*60));
+            let min = Math.floor(lefTime%(1000*60*60)/(1000*60));
+            let sec = Math.floor(lefTime%(1000*60)/(1000));
+
+            let result = `${days}Days_ ${hrs.toString().padStart(2,0)}hours_ ${min.toString().padStart(2,0)}minutes_ ${sec}`;
+            document.getElementById('time').innerText = result;    
+            
+        }
+        getTime();
+        getTime = setInterval(getTime,1000);
+        
+        let qoutes = [
+            "“Friends are the family we choose.” — Jennifer Aniston”",
+            "“My purpose: to lift your spirit and to motivate you”",
+            "“Kindness is one thing you can’t give away. It always comes back.” — George Skolsky”",
+            "“Great things happen to those who don't stop believing, trying, learning, and being grateful.- Roy T. Bennett”",
+            "“Try to be a rainbow in someone else’s cloud.” — Maya Angelou”",
+            "“Sometimes, when things are falling apart, they may actually be falling into place. — Unknown”",
+            "“Fight for the things that you care about, but do it in a way that will lead others to join you.” —Ruth Bader Ginsburg”",
+            "“Happiness is not by chance but by choice. — Jim Rohn”"
+        ]
+        let getqutes = () =>
+        {
+            let arr = Math.floor(Math.random()*qoutes.length);
+            document.getElementById('text').innerText =qoutes[arr];
+        }
+        getqutes();
+        getqutes = setInterval(getqutes,1000);
+    </script>
+</body>
+</html>
