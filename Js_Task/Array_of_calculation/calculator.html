@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <h1>Numerical calculator</h1>
+    <div class="main">
+        <table class="table">
+            <tr>
+                <td colspan="7">
+                    <div>
+                        <input type="text" id="inp">
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><button class="btn"><i class="fa-solid fa-play"></i></button></td>
+                <td><button class="btn" type="button">7</button></td>
+                <td><button class="btn">8</button></td>
+                <td><button class="btn">9</button></td>
+                <td><button class="btn">/</button></td>
+                <td><button class="btn"><i class="fa-solid fa-square-root-variable"></i></button></td>
+                <td><button class="btn" id="btn_css_1">AC</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">GT</button></td>
+                <td><button class="btn">4</button></td>
+                <td><button class="btn">5</button></td>
+                <td><button class="btn">6</button></td>
+                <td><button class="btn">*</button></td>
+                <td><button class="btn">%</button></td>
+                <td><button class="btn"><div  class="btn1"><p class="p_btn_css">M</p><div class="spa_css"><span>R</span><br><span class="spa2_css">C</span></div></div></button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">MU</button></td>
+                <td><button class="btn">3</button></td>
+                <td><button class="btn">2</button></td>
+                <td><button class="btn">1</button></td>
+                <td rowspan="2"><button class="btn btn_css_2">+</button></td>
+                <td><button class="btn">-</button></td>
+                <td><button class="btn"><div  class="btn1"><p class="p_btn_css">M</p><div class="spa_css"><span>-</span><br><span class="spa2_css">=</span></div></div></button></td>
+            </tr>
+             <tr>
+                <td><button class="btn">CE</button></td>
+                <td><button class="btn">0</button></td>
+                <td><button class="btn">00</button></td>
+                <td><button class="btn">.</button></td>
+                <td><button class="btn">=</button></td>
+                <td><button class="btn"><div  class="btn1"><p class="p_btn_css">M</p><div class="spa_css"><span>+</span><br><span class="spa2_css">=</span></div></div></button></td>
+            </tr>
+        </table>
+    </div>
+    <!-- javascript -->
+    <script>
+        
+        let string = "";
+        let buttons = document.querySelectorAll('.btn');
+        Array.from(buttons).forEach((button)=>{
+            button.addEventListener('click',(e)=>{
+                if(e.target.innerHTML == '=')
+                {
+                    string = eval(string);
+                    document.getElementById('inp').value = string;
+                }
+                else if(e.target.innerHTML == 'AC')
+                {
+                    string = "";
+                    document.getElementById('inp').value = string;
+                }
+                else if(e.target.innerHTML == 'CE'){
+                    string = string.substring(0,string.length-1)
+                    document.getElementById('inp').value = string
+                    /*secomd mothod*/
+                    // string = string.slice(0,-1);
+                    // document.getElementById('inp').value = string;
+                }
+                else
+                {
+                string = string+ e.target.innerHTML;
+                document.getElementById('inp').value = string;
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>

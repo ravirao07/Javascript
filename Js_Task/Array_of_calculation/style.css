@@ -1,0 +1,63 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+    margin-top: 150px;
+}
+.table
+{
+    background-color:orange;
+    margin: auto;
+    margin-top: 50px;
+}
+.btn1
+{
+    display: flex;
+}
+.btn
+{
+    width: 70px;
+    height: 60px;
+    font-size: 19px;
+    cursor: pointer;
+}
+#btn_css_1
+{
+    background-color: lightgreen;
+}
+.p_btn_css
+{
+    font-size: 26px ;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.btn_css_2
+{
+    font-size: 30px ;
+    margin-top: 12px;
+    margin-left: 12px; 
+    height: 123px;
+    width: 68px;
+    margin-left: 1px;
+    margin-top: -1px;
+}
+.spa_css
+{
+    color: red;
+    margin-top: 10px;
+}
+.spa2_css
+{
+    margin-top: -10px;
+}
+#inp
+{
+    width: 98%;
+    height: 50px;
+}
+h1
+{
+    margin-bottom: -12px;
+}

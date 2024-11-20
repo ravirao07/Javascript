@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="main">
+            <input type="text" placeholder="Enter text" id="inp">
+            <button onclick="ans()">add</button>
+         <div id="aa"></div>
+        <button onclick="rem()">remove</button>
+        </div>
+    </div>
+    <script>
+        function ans()
+        {
+            let ab = document.getElementById('inp');
+            let ac = document.getElementById('aa');
+            ac.textContent=ab.value;
+            ac.appendChild(ac);
+         }
+         function rem()
+         {
+            let ba = document.getElementById('main');
+            let bc = document.getElementById('aa');
+            let remove = ba.removeChild(bc);
+         }
+    </script>
+</body>
+</html> 

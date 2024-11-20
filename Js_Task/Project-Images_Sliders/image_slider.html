@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images Sliders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main{
+            width: 100%;
+            /* height: 900px; */
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+        }
+        .galary{
+            width: 1300px;
+            display: flex;
+            overflow-x: scroll;
+            background-color: transparent;
+           
+        }
+        .galary div{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            flex: none;
+        }
+        .galary div img
+        {
+            width: 100%;
+            height: 350px;
+        }
+        .icon{
+            margin: 0px 50px;
+            font-size: 25px;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="icon">
+            <i class="fa-solid fa-arrow-left" id="prevet_btn"></i>
+        </div>
+        <div class="galary">
+            <div>
+                <span> <img src="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_960_720.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2016/12/04/21/22/snowman-1882635_960_720.jpg" alt=""></span>
+                <span><img src=https://cdn.pixabay.com/photo/2023/07/09/17/16/bird-8116580_1280.jpg alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2018/05/26/10/54/strawberries-3431122_640.jpg" alt=""></span>
+            </div>
+            <div>
+                <span><img src="https://cdn.pixabay.com/photo/2012/03/01/00/55/flowers-19830_960_720.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2015/12/08/05/58/ice-skates-1082514_960_720.jpg" alt=""></span>
+                <span><img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=2048x2048&w=is&k=20&c=Xa_wH_pZFMWNX8EPtufv9KSvS1OzUPus7C0Br2ZIMDg=" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/12/13/06/40/cat-8446390_1280.jpg" alt=""></span>
+            </div>
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-arrow-right" id="next_btn"></i>
+        </div>
+    </div>
+    <script>
+        let galary_container = document.querySelector('.galary');
+        let prev_btn = document.getElementById('prevet_btn');
+        let next_btn = document.getElementById('next_btn');
+
+        galary_container.addEventListener("wheel",(evt)=>{evt.prev_btnDefault()
+        galary_container.scrollLeft += evt.deltaY})
+
+        prev_btn.addEventListener("click",()=>{
+            galary_container.style.scrollBehavior = "smooth";
+            galary_container.scrollLeft -=1200;
+        })
+        next_btn.addEventListener("click",()=>{
+            galary_container.style.scrollBehavior = "smooth";
+            galary_container.scrollLeft +=1200;
+        })
+    
+    </script>
+</body>
+</html>

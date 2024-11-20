@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading_system</title>
+</head>
+<body>
+    <h1 id="head">Pleas Check the output in consol screen</h1>
+    <script>
+        let percentage = prompt("Enter the percentage");
+        let grade;
+        if(percentage>=80)
+        {
+            grade=' : A';
+        }
+        else if(percentage>=70)
+        {
+            grade=' : B+';
+        }
+        else if(percentage>=60)
+        {
+            grade=' : B';
+        }
+        else if(percentage>=50)
+        {
+            grade=' : c+';
+        }
+        else if(percentage>=40)
+        {
+            grade=' : c';
+        }
+        document.getElementById('head').innerHTML;
+        console.log("This grad"+grade);
+    </script>
+</body>
+</html>
